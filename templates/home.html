@@ -1,0 +1,145 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load staticfiles %}
+{% block title %} Virtual Classroom {% endblock %}
+
+{% block content %}
+
+<!DOCTYPE html>
+  <html>
+    <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css">
+
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
+    <head>
+      <!--Import Google Icon Font-->
+      <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <!--Import materialize.css-->
+      <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+
+      <!--Let browser know website is optimized for mobile-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </head>
+
+    <body>
+     
+<! end of nav-->
+    <br>
+     
+     <div class="container">
+         <div class="slider">
+    <ul class="slides">
+      <li>
+        <img src="http://res.cloudinary.com/py/image/upload/v1466672073/slides_wbac94.jpg"> <!-- random image -->
+        <div class="caption center-align red-text">
+          <h3>Welcome to Koforidua Poly Virtual Classroom for computer Science Department</h3>
+          <h5 class="light grey-text text-lighten-3">Technology at it's peak.</h5>
+        </div>
+      </li>
+      <li>
+      <img src="images/book2.jpg"> <!-- random image -->
+        <div class="caption left-align">
+          <h3>Download your Learning materials here</h3>
+          <h5 class="light grey-text text-lighten-3">PDF, SLIDES, WORD,VIDEOS .</h5>
+        </div>
+      </li>
+      <li>
+        <img src="images/book3.jpg"> <!-- random image -->
+        <div class="caption right-align black-text">
+          <h3>Right Aligned Caption</h3>
+          <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+        </div>
+      </li>
+      <li>
+       <img src="images/book4.jpg"> <!-- random image -->
+        <div class="caption center-align black-text">
+          <h3>This is our big Tagline!</h3>
+          <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+        </div>
+      </li>
+    </ul>
+  </div> 
+     </div>
+     
+    
+     
+           <div class="container">
+                         <div class="row">
+           <div class="col s12 m4">
+         
+           <img src="http://res.cloudinary.com/py/image/upload/v1466672073/slides_wbac94.jpg" >
+           <p>
+               Crystal Clear Full Duplex Audio
+Integrated Audio Conferencing. Multiple Speakers. High Quality Voice over IP (VoIP) even on lower bandwidths. Audios are availble for students to download.
+
+           </p>
+           
+            </div>
+            <div class="col s12 m4">
+            
+          
+            <img src="http://res.cloudinary.com/py/image/upload/v1466672073/slides_wbac94.jpg" >
+                <p>Manage your classes and students easily with handy features like Attendance Reporting, Recording, and Notifications.</p>
+            
+            </div>
+            <div class="col s12 m4">
+            
+            <img src="http://res.cloudinary.com/py/image/upload/v1466672073/slides_wbac94.jpg" class="materialboxed prefix">
+                <p>Share PowerPoint, Files and Images
+
+Share PowerPoint, PDF, DOC, XLS, TXT and other common document types. Use markup and annotation over slides and pages. Launch files and broadcast images synchronously..</p>
+            </div>
+               <div class="col s12 m4">
+           
+            <img src="http://res.cloudinary.com/py/image/upload/v1466672073/slides_wbac94.jpg" class="materialboxed prefix">
+                <p>High quality videos recorded by lecturers are available for students to download</p>
+            </div>
+              <div class="col s12 m4">
+           
+            <img src="http://res.cloudinary.com/py/image/upload/v1466672073/slides_wbac94.jpg" class="materialboxed prefix">
+                <p>You can download your class time table here...
+                click the link to view time table</p>
+                <div class="card-action">
+              <a href="#">view timetables</a>
+            </div>
+            </div>
+              <div class="col s12 m4">
+            
+            <img src="http://res.cloudinary.com/py/image/upload/v1466672073/slides_wbac94.jpg" class="materialboxed prefix">
+                <p>Guided Web Tours
+
+Many resources are located on web sites on the Internet. Take your audience to a web page - all together at once. Navigate safely and securely.</p>
+            </div>
+      
+        </div>
+           </div>
+ 
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+      <!--Import jQuery before materialize.js-->
+      <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+      <script type="text/javascript" src="js/materialize.min.js"></script>
+      
+      
+       <script>
+    $(document).ready(function(){
+      $('.slider').slider({full_width: true});
+    });
+      </script>
+    </body>
+    
+    
+    
+   
+  </html>
+{% endblock %}

@@ -1,0 +1,123 @@
+{% load static %}
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %} Virtual Class {% endblock %}</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/materialize.min.css' %}" />
+     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>           
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js"></script>
+    
+</head>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+<body>
+<div class="navbar-fixed">
+    <nav class="blue">
+      <div class="nav-wrapper container">
+        <a href="#!" class="brand-logo">VCR</a>
+       <ul class="right hide-on-med-and-down">
+          <li><a href="/">HOME</a></li>
+          <li><a href="#">NEWS</a></li>
+          <li><a class='dropdown-button' href='#' data-activates='dropdown1'>CLASS</a>
+  <ul id='dropdown1' class='dropdown-content'>
+    <li><a href="first.html">Level 100</a></li>
+      <li class="divider"></li>
+    <li><a href="second.html">Level 200</a></li>
+    <li class="divider"></li>
+    <li><a href="third.html">Level 300</a></li> 
+</ul>
+
+ {% if user.is_authenticated %}  <li> welcome {{user.username}}</li>
+            <li><a href="/accounts/signout">Logout</a></li>
+            {% else %}
+<li><a href="/accounts/signin">Login</a></li>
+      {% endif %}
+      </ul>
+
+    </nav>
+  </div>
+  
+    
+{% block content %}
+
+{% endblock %}
+    
+<footer class="page-footer blue">
+          <div class="container">
+            <div class="row">
+             <div class="row">
+                <div class="col s12 l4 "><b><b><b>ABOUT</b></b></b>
+                <br>
+                <p class="white-text">The Virtual Classroom is available as a fully hosted service on the Internet. When you login to virtual classroom you receive a fully functional... 
+                </p>
+                <a  class="waves-effect waves-light btn" href="#">READ MORE</a>
+                
+                </div>
+                <div class="col s12 l4"><b><b><b>CONTACT</b></b></b>
+                <div><p class="white-text" >You can contacts us through the following... <br><br> <a href="#"><i class="fa fa-envelope-o fa-2x"></i></a>arhin175@gmail.com 
+                <br>
+                <a href="#"><i class="fa fa-phone fa-2x "></i></a>+233 543869266
+                </p>
+                
+                </div>
+          
+                </div>
+                <div class="col s12 l4"><b><b><b>FOLLOW US</b></b></b>
+                <br>
+             <a href="#"><i class="btn fa fa-facebook deep-purple darken-4 fa-2x "></i></a>
+                    <a href="#"><i class="btn fa fa-twitter fa-3x blue"></i></a>
+                </div>
+               
+             </div>
+          </div>
+          </div>
+          <div class="footer-copyright">
+            <div class="container">
+            © 2016 Copyright VCR
+            </div>
+          </div>
+        </footer>
+
+    <script id="dsq-count-scr" src="//vclass.disqus.com/count.js" async></script>
+</body>
+    <script>
+$('.dropdown-button').dropdown({
+      inDuration: 300,
+      outDuration: 225,
+      constrain_width: false, // Does not change width of dropdown to that of the activator
+      hover: true, // Activate on hover
+      gutter: 0, // Spacing from edge
+      belowOrigin: false, // Displays dropdown below the button
+      alignment: 'left' // Displays dropdown with edge aligned to the left of button
+    }
+  );
+    
+    </script>
+<script>
+var disqus_shortname = 'vclass';
+  var disqus_url = '{{ site.url }}{{ page.url }}';
+    /**
+     *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+     *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+     */
+    /*
+    var disqus_config = function () {
+        this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+    */
+    (function() {  // DON'T EDIT BELOW THIS LINE
+        var d = document, s = d.createElement('script');
+
+        s.src = '//vclass.disqus.com/embed.js';
+
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+</html>
